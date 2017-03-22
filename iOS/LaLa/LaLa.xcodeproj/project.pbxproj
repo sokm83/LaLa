@@ -12,6 +12,7 @@
 		16DF37DB1E8268EC008EE40F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16DF37D91E8268EC008EE40F /* Main.storyboard */; };
 		16DF37DD1E8268EC008EE40F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16DF37DC1E8268EC008EE40F /* Assets.xcassets */; };
 		16DF37E01E8268EC008EE40F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16DF37DE1E8268EC008EE40F /* LaunchScreen.storyboard */; };
+		16DF37E91E82708C008EE40F /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16DF37E81E82708C008EE40F /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		16DF37DC1E8268EC008EE40F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		16DF37DF1E8268EC008EE40F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		16DF37E11E8268EC008EE40F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		16DF37E81E82708C008EE40F /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +31,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16DF37E91E82708C008EE40F /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +43,7 @@
 			children = (
 				16DF37D41E8268EC008EE40F /* LaLa */,
 				16DF37D31E8268EC008EE40F /* Products */,
+				16DF37E71E82708C008EE40F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -62,6 +66,14 @@
 				16DF37E11E8268EC008EE40F /* Info.plist */,
 			);
 			path = LaLa;
+			sourceTree = "<group>";
+		};
+		16DF37E71E82708C008EE40F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				16DF37E81E82708C008EE40F /* MapKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -97,6 +109,11 @@
 					16DF37D11E8268EC008EE40F = {
 						CreatedOnToolsVersion = 8.2.1;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
