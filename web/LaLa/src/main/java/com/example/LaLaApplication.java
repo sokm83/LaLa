@@ -8,5 +8,6 @@ public class LaLaApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(LaLaApplication.class, args);
+		System.out.println("some change");
 	}
 }
