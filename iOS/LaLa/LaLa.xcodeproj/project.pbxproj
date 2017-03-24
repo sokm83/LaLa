@@ -51,6 +51,7 @@
 		16DF37DD1E8268EC008EE40F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16DF37DC1E8268EC008EE40F /* Assets.xcassets */; };
 		16DF37E01E8268EC008EE40F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16DF37DE1E8268EC008EE40F /* LaunchScreen.storyboard */; };
 		16DF37E91E82708C008EE40F /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16DF37E81E82708C008EE40F /* MapKit.framework */; };
+		16E407541E83FC610075A936 /* GPSLoggerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E407531E83FC610075A936 /* GPSLoggerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -100,6 +101,7 @@
 		16DF37DF1E8268EC008EE40F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		16DF37E11E8268EC008EE40F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		16DF37E81E82708C008EE40F /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		16E407531E83FC610075A936 /* GPSLoggerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GPSLoggerViewController.swift; path = "GPS Logger/GPSLoggerViewController.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +144,7 @@
 		16363C7E1E83AC7C000B7565 /* GPS Logger */ = {
 			isa = PBXGroup;
 			children = (
+				16E407531E83FC610075A936 /* GPSLoggerViewController.swift */,
 			);
 			name = "GPS Logger";
 			sourceTree = "<group>";
@@ -372,6 +375,7 @@
 			files = (
 				16363C821E83ADAA000B7565 /* ClockViewController.swift in Sources */,
 				16DF37D61E8268EC008EE40F /* AppDelegate.swift in Sources */,
+				16E407541E83FC610075A936 /* GPSLoggerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

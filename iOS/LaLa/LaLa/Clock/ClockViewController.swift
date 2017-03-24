@@ -28,27 +28,65 @@ class ClockViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-//        [dateLabel.layer setBackgroundColor:[[UIColor clearColor] CGColor]];
-//        [dateLabel.layer setBorderColor:[[UIColor greenColor] CGColor]];
-//        [dateLabel.layer setCornerRadius:10];
-//        [dateLabel.layer setBorderWidth:2.0];
-//        [dateLabel.layer setMasksToBounds:YES];
+        self.initUI()
+        self.initialize()
     }
-
+    
+    func initUI() {
+        self.dateLabel.layer.borderColor = UIColor.white.cgColor
+        self.dateLabel.layer.cornerRadius = 10
+        self.dateLabel.layer.borderWidth = 1.0
+        self.dateLabel.layer.masksToBounds = true
+    }
+    
+    func initialize() {
+        let directions: [UISwipeGestureRecognizerDirection] = [.right, .left, .up, .down]
+        for direction in directions {
+            let gesture = UISwipeGestureRecognizer(target: self, action: #selector(self.respondToSwipeGesture(gesture:)))
+            gesture.direction = direction
+            self.view.addGestureRecognizer(gesture)
+        }
+    }
+    
+    func respondToSwipeGesture(gesture: UIGestureRecognizer) {
+        if let swipeGesture = gesture as? UISwipeGestureRecognizer {
+            switch swipeGesture.direction {
+            case UISwipeGestureRecognizerDirection.left: fallthrough
+            case UISwipeGestureRecognizerDirection.right:
+                self.moveGPSLogger(sender: self)
+            default:
+                break;
+            }
+        }
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "gpsLogger_segue" {
+//            let path = self.tableView.indexPath(for: sender as! MovieCell)
+//            let detailVC = segue.destination as? DetailViewController
+//            detailVC?.mvo = self.list[path!.row]
+            NSLog("prepare [gpsLogger_segue]")
+        }
     }
-    */
+    
+    @IBAction func moveGPSLogger(sender : AnyObject) {
+        performSegue(withIdentifier: "gpsLogger_segue", sender: self)
+    }
+    
+    @IBAction func unwindToClock(_ segue: UIStoryboardSegue) {
+        NSLog("unwindToClock")
+    }
 
 }
